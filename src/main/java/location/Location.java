@@ -3,18 +3,18 @@ package location;
 import java.util.List;
 
 import store.StoreManager;
-import subway.SubwayManger;
+import subway.SubwayManager;
 
 public class Location {
 
-	private SubwayManger subwayManger;
+	private SubwayManager subwayManager;
 
 	public Location() {
-		this.subwayManger = new SubwayManger();
+		this.subwayManager = new SubwayManager();
 	}
 
-	public void setSubwayManger(SubwayManger subwayManger) {
-		this.subwayManger = subwayManger;
+	public void setSubwayManager(SubwayManager subwayManager) {
+		this.subwayManager = subwayManager;
 	}
 
 	/**
@@ -34,7 +34,7 @@ public class Location {
 	 */
 	public boolean isHotArea(String location) {
 		StoreManager manager = new StoreManager();
-		return (subwayManger.isStationExist(location)) && (manager.getCafeList(location).size() >= 3);
+		return (subwayManager.isStationExist(location)) && (manager.getCafeList(location).size() >= 3);
 	}
 
 }

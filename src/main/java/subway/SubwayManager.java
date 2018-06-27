@@ -1,6 +1,6 @@
 package subway;
 
-public class SubwayManger {
+public class SubwayManager {
 
 	/**
 	 * 미구현 메서드
